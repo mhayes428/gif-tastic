@@ -1,4 +1,4 @@
-var characterArray = ["Aragorn", "Legolas", "Gandalf", "Gimli"];
+var characterArray = ["Aragorn", "Legolas", "Gandalf", "Gimli", "Frodo"];
 
 $(document).ready(function () {
     for (var i = 0; i < characterArray.length; i++) {
@@ -39,4 +39,18 @@ function displayGif(response) {
 
         image = '<div class="col-md-4">' + image + "</div>";
         $('#characters').append(image);
-    } 
+    }
+
+    $('.movImage').on('click', function () {
+        var state = $(this).attr('data-state');
+        if (state == 'still') {
+            $(this).attr('src', $(this).attr("data-animate"));
+            $(this).attr('data-state', 'animate');
+        } else {
+            $(this).attr('src', $(this).attr("data-still"));
+            $(this).attr('data-state', 'still');
+        }
+
+    });
+
+}
