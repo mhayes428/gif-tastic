@@ -17,18 +17,18 @@ function submitButtonClicked() {
     if (userInput) {
         $('#character-buttons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
     }
-} 
+}
 
 
 function searchGif(gifName) {
     $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/search?q=lord+of+the+rings ' + gifName + ' &api_key=gOkeGOoowuRgibEdfXeUeBagEsBGFJDx',
-            method: 'GET',
-        })
-        .done(function(response) {
+        url: 'https://api.giphy.com/v1/gifs/search?q=lord+of+the+rings ' + gifName + ' &api_key=gOkeGOoowuRgibEdfXeUeBagEsBGFJDx',
+        method: 'GET',
+    })
+        .done(function (response) {
             displayGif(response);
         })
-} 
+}
 
 function displayGif(response) {
     $('#characters').empty();
