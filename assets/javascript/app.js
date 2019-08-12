@@ -21,7 +21,7 @@ function submitButtonClicked() {
 
 function searchGif(gifName) {
     $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=gOkeGOoowuRgibEdfXeUeBagEsBGFJDx',
+            url: 'https://api.giphy.com/v1/gifs/search?q=lord+of+the+rings ' + gifName + ' &api_key=gOkeGOoowuRgibEdfXeUeBagEsBGFJDx',
             type: 'GET',
         })
         .done(function(response) {
