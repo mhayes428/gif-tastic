@@ -15,13 +15,6 @@ h1 {
     color: orangered;
 }
 
-@media screen and (max-width: 480px) {
-    .movImage {
-        width: 500px;
-        height: 500px;
-    }
-}
-
 .form-control {
     width: 30%;
 }
@@ -30,4 +23,11 @@ h1 {
     font-family: 'MedievalSharp', cursive;
     font-size: 20px;
     color: black;
+}
+
+@media screen and (max-width: 480px) {
+    .movImage {
+        width: 500px;
+        height: 500px;
+    }
 }
