@@ -18,3 +18,13 @@ function submitButtonClicked() {
         $('#character-buttons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
     }
 }
+
+function searchGif(gifName) {
+    $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=gOkeGOoowuRgibEdfXeUeBagEsBGFJDx',
+            type: 'GET',
+        })
+        .done(function(response) {
+            displayGif(response);
+        })
+}
