@@ -1,0 +1,1 @@
+var characterArray = ["Aragorn", "Legolas", "Gandalf", "Gimli"];
