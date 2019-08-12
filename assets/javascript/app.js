@@ -1,4 +1,4 @@
-var characterArray = ["Aragorn", "Legolas", "Gandalf", "Gimli", "Frodo"];
+var characterArray = ["Aragorn", "Legolas", "Gandalf", "Gimli", "Frodo", "Bilbo", "Samwise", "Boromir", "Faromir", "Merry", "Pippin", "Balrog", "Shelob", "Gollum", "Smeagol"];
 
 $(document).ready(function () {
     for (var i = 0; i < characterArray.length; i++) {
@@ -17,17 +17,18 @@ function submitButtonClicked() {
     if (userInput) {
         $('#character-buttons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
     }
-} //console.log(submitButtonClicked)
+} 
+
 
 function searchGif(gifName) {
     $.ajax({
             url: 'https://api.giphy.com/v1/gifs/search?q=lord+of+the+rings ' + gifName + ' &api_key=gOkeGOoowuRgibEdfXeUeBagEsBGFJDx',
-            type: 'GET',
+            method: 'GET',
         })
         .done(function(response) {
             displayGif(response);
         })
-}
+} 
 
 function displayGif(response) {
     $('#characters').empty();
