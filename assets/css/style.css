@@ -1,6 +1,6 @@
-body {
-    background-color: aliceblue;
-}
+/* body {
+    background-image: url("mordor.jpg");
+} */
 
 h1 {
     color: black;
@@ -29,3 +29,4 @@ h1 {
     font-size: 20px;
     color: black;
 }
+
